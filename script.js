@@ -31,4 +31,34 @@ window.addEventListener("scroll", function() {
     });
 });
 
+// Add profile image dynamically
+const profileImage = document.createElement("img");
+profileImage.src = "images/profile.jpg"; // Ensure you upload an image with this name
+profileImage.alt = "Mohamed Ahmed Kamel";
+profileImage.style.width = "150px";
+profileImage.style.borderRadius = "50%";
+document.getElementById("profile").appendChild(profileImage);
+
+// Add personal details
+document.getElementById("name").innerText = "Mohamed Ahmed Kamel";
+document.getElementById("title").innerText = "Mechanical Design Engineer";
+document.getElementById("location").innerText = "Abu Hammad, Sharkia, Egypt";
+document.getElementById("phone").innerText = "+201014599752";
+document.getElementById("email").innerText = "kamelmohamedahmed154@gmail.com";
+document.getElementById("linkedin").innerText = "mohamed-kamel";
+document.getElementById("summary").innerText = "Mechanical Design Engineer with extensive experience in developing innovative engineering solutions...";
+
+// Add project images dynamically
+const projectsSection = document.getElementById("projects");
+const projectImages = ["project1.jpg", "project2.jpg", "project3.jpg"]; // Add actual image names
+
+projectImages.forEach(image => {
+    let imgElement = document.createElement("img");
+    imgElement.src = "images/" + image;
+    imgElement.alt = "Project Image";
+    imgElement.style.width = "200px";
+    imgElement.style.margin = "10px";
+    projectsSection.appendChild(imgElement);
+});
+
 });
