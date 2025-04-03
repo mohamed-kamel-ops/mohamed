@@ -1,153 +1,393 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Ahmed Kamel - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>محمد أحمد كامل - السيرة الذاتية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
+<header class="header-section">
     <div class="container">
-        <img src="images/mohamed.jpeg" alt="Mohamed Ahmed Kamel" class="profile-pic">
-        <h1>Mohamed Ahmed Kamel</h1>
-        <h2>Mechanical Design Engineer</h2>
-        <p>📍 Abu Hammad, Sharkia, Egypt | 📞 +201014599752 | 📧 <a href="mailto:kamelmohamedahmed154@gmail.com">kamelmohamedahmed154@gmail.com</a></p>
+        <div class="profile-container">
+            <div class="profile-image-container">
+                <img src="images/mohamed.jpeg" alt="محمد أحمد كامل" class="profile-pic">
+                <div class="profile-overlay">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mohamed-kamel" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:kamelmohamedahmed154@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+201014599752"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-info">
+                <h1>محمد أحمد كامل</h1>
+                <h2>مهندس تصميم ميكانيكي</h2>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> أبو حماد، الشرقية، مصر</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+201014599752" dir="ltr">+201014599752</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:kamelmohamedahmed154@gmail.com">kamelmohamedahmed154@gmail.com</a></p>
+                    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mohamed-kamel" target="_blank">mohamed-kamel</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 
-<nav>
-    <ul>
-        <li><a href="#summary" class="active">Summary</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-    </ul>
-</nav>
-
-<section id="summary" class="section">
+<nav class="main-nav">
     <div class="container">
-        <h2>Summary</h2>
-        <p>Mechanical Design Engineer with extensive experience in developing innovative engineering solutions. Proficient
-        in CAD, simulation, and analysis tools to optimize designs for efficiency and performance. Adept at project
-        management, ensuring on-time delivery within budget constraints. A collaborative communicator with strong
-        analytical skills, passionate about staying updated on industry trends and leveraging new technologies.</p>
-    </div>
-</section>
-
-<section id="experience" class="section">
-    <div class="container">
-        <h2>Experience</h2>
-        
-        <div class="experience-item">
-            <h3>Elsewedy Electric</h3>
-            <p><strong>Mechanical Design Engineer</strong> | Jan 2025 - Present | 10th of Ramadan</p>
-            <ul>
-                <li>Design and model comprehensive busway systems using Revit, transforming 2D architectural drawings into detailed 3D models.</li>
-                <li>Perform precise busway routing and prepare technical documentation, including item lists with part specifications.</li>
-                <li>Generate project schedules, shop drawings, and BOQs aligned with client-approved single-line diagrams.</li>
-                <li>Collaborate with clients to clarify design requirements and ensure compliance with project standards.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h3>ALSAKR for Trading & Manufacturing of Machinery</h3>
-            <p><strong>Technical Office Engineer</strong> | Jul 2024 - Jan 2025 | 10th of Ramadan</p>
-            <ul>
-                <li>Developed detailed mechanical design plans using CAD software (SolidWorks).</li>
-                <li>Performed calculations and simulations to ensure design integrity and efficiency.</li>
-                <li>Collaborated with electrical engineers to integrate electrical components into mechanical design.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h3>MATEX WACH & DYE MACHINES</h3>
-            <p><strong>Mechanical Design Engineer</strong> | Jul 2022 - Jan 2024 | 10th of Ramadan</p>
-            <ul>
-                <li>Designed mechanical systems and components tailored to client specifications.</li>
-                <li>Supervised a team of 7 members, overseeing the design process from inception to assembly.</li>
-                <li>Managed Bill of Materials (BOM) modifications and ensured precision in drawings.</li>
-            </ul>
-        </div>
-
-        <div class="experience-item">
-            <h3>I.C.S</h3>
-            <p><strong>Mechanical Design Engineer (Internship)</strong> | Jul 2020 - Dec 2020</p>
-            <ul>
-                <li>Gained hands-on experience and mentorship from industry professionals.</li>
-                <li>Developed technical skills in design engineering and problem-solving.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section id="education" class="section">
-    <div class="container">
-        <h2>Education</h2>
-        <div class="education-item">
-            <h3>Al-Azhar University, Cairo</h3>
-            <p><strong>Bachelor’s Degree in Mechanical Engineering</strong> | Jan 2018 - Apr 2023</p>
-            <p>Grade: Good</p>
-        </div>
-    </div>
-</section>
-
-<section id="skills" class="section">
-    <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <span>SolidWorks</span>
-            <span>Revit</span>
-            <span>Inventor</span>
-            <span>AutoCAD</span>
-            <span>Manufacturing Techniques</span>
-        </div>
-    </div>
-</section>
-
-<section id="certifications" class="section">
-    <div class="container">
-        <h2>Certifications</h2>
-        
-        <div class="certification-item">
-            <h3>Certified SolidWorks Associate (CSWA)</h3>
-            <p>Dassault Systèmes | Oct 2021</p>
-        </div>
-
-        <div class="certification-item">
-            <h3>Lean Six Sigma Yellow Belt</h3>
-            <p>6sigmastudy - The Global Certification Body for Six Sigma | Feb 2021</p>
-        </div>
-
-        <div class="certification-item">
-            <h3>Operations Management Foundation</h3>
-            <p>Project Management Institute (PMI) | Mar 2025</p>
-        </div>
-
-        <div class="certification-item">
-            <h3>Revit for Design Professional</h3>
-            <p>LinkedIn Learning | Feb 2025</p>
-        </div>
-    </div>
-</section>
-
-<section id="languages" class="section">
-    <div class="container">
-        <h2>Languages</h2>
         <ul>
-            <li><strong>Arabic:</strong> Native</li>
-            <li><strong>English:</strong> B2</li>
+            <li><a href="#summary" class="active"><i class="fas fa-user"></i> نبذة</a></li>
+            <li><a href="#experience"><i class="fas fa-briefcase"></i> الخبرات</a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> التعليم</a></li>
+            <li><a href="#skills"><i class="fas fa-tools"></i> المهارات</a></li>
+            <li><a href="#certifications"><i class="fas fa-certificate"></i> الشهادات</a></li>
+            <li><a href="#languages"><i class="fas fa-language"></i> اللغات</a></li>
+            <li><a href="#projects"><i class="fas fa-project-diagram"></i> المشاريع</a></li>
         </ul>
     </div>
-</section>
+</nav>
+
+<main>
+    <section id="summary" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-user"></i> نبذة مهنية</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-content">
+                <p>مهندس تصميم ميكانيكي ذو خبرة واسعة في تطوير حلول هندسية مبتكرة. متمكن من استخدام أدوات التصميم بمساعدة الحاسوب (CAD) والمحاكاة والتحليل لتحسين التصاميم من أجل الكفاءة والأداء. بارع في إدارة المشاريع، مما يضمن التسليم في الوقت المحدد ضمن قيود الميزانية. متواصل تعاوني يتمتع بمهارات تحليلية قوية، شغوف بالبقاء على اطلاع بأحدث اتجاهات الصناعة والاستفادة من التقنيات الجديدة.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-briefcase"></i> الخبرات العملية</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">يناير 2025 - حتى الآن</div>
+                        <div class="timeline-content">
+                            <h3>مهندس تصميم ميكانيكي</h3>
+                            <h4>Elsewedy Electric</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> العاشر من رمضان</p>
+                            <ul>
+                                <li>تصميم ونمذجة أنظمة busway شاملة باستخدام Revit، وتحويل الرسومات المعمارية ثنائية الأبعاد إلى نماذج ثلاثية الأبعاد مفصلة.</li>
+                                <li>إجراء توجيه دقيق للـ busway وإعداد وثائق تقنية، بما في ذلك قوائم العناصر مع مواصفات الأجزاء والرموز والكميات.</li>
+                                <li>إنشاء جداول المشاريع والرسومات التنفيذية وجداول الكميات (BOQs) بما يتماشى مع مخططات الخط الواحد المعتمدة من العميل.</li>
+                                <li>التعاون مباشرة مع العملاء لتوضيح متطلبات التصميم، وتأمين الموافقات، وضمان الامتثال لمعايير المشروع.</li>
+                                <li>استخدام AutoCAD لإعداد رسومات ثنائية الأبعاد للدمج في Revit واستخدام Inventor لنمذجة المكونات حسب الحاجة.</li>
+                                <li>الحفاظ على الاهتمام الدقيق بالتفاصيل طوال دورة حياة التصميم، من التصور إلى التسليمات النهائية.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">يوليو 2024 - يناير 2025</div>
+                        <div class="timeline-content">
+                            <h3>مهندس المكتب الفني</h3>
+                            <h4>ALSAKR for Trading & Manufacturing of Machinery and Equipments S.A.E</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> العاشر من رمضان</p>
+                            <ul>
+                                <li>تطوير خطط تصميم ميكانيكية مفصلة باستخدام برامج CAD (SolidWorks).</li>
+                                <li>إجراء الحسابات والمحاكاة لضمان سلامة وكفاءة التصميم.</li>
+                                <li>التعاون مع مهندسي الكهرباء لدمج المكونات الكهربائية في التصميم الميكانيكي.</li>
+                                <li>تحسين التصاميم للتصنيع وإنشاء والحفاظ على الوثائق التقنية.</li>
+                                <li>المشاركة في اختبار النماذج الأولية وتحليل البيانات لتحسين أداء التصميم.</li>
+                                <li>ضمان الامتثال لمعايير الصناعة ولوائح السلامة وتقديم الدعم الفني أثناء عملية التصنيع.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">يوليو 2022 - يناير 2024</div>
+                        <div class="timeline-content">
+                            <h3>مهندس تصميم ميكانيكي</h3>
+                            <h4>MATEX WACH & DYE MACHINES</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> العاشر من رمضان</p>
+                            <ul>
+                                <li>تصور وتصميم الأنظمة والمكونات الميكانيكية المخصصة لتلبية مواصفات العملاء.</li>
+                                <li>إنشاء نماذج شاملة ورسومات ووثائق تقنية باستخدام برنامج SolidWorks.</li>
+                                <li>إجراء تقييمات شاملة لبدائل التصميم للجدوى والفعالية، مما يضمن الحلول المثلى.</li>
+                                <li>الإشراف على فريق مكون من 7 أعضاء، والإشراف على عملية التصميم بأكملها من البداية إلى التجميع.</li>
+                                <li>إدارة تعديلات قائمة المواد (BOM) على الرسومات ثنائية الأبعاد، مما يضمن الدقة والتوحيد.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">يوليو 2020 - ديسمبر 2020</div>
+                        <div class="timeline-content">
+                            <h3>مهندس تصميم ميكانيكي (تدريب)</h3>
+                            <h4>I.C.S</h4>
+                            <ul>
+                                <li>اكتساب خبرة عملية وإرشاد من المهنيين في الصناعة.</li>
+                                <li>تطوير المهارات التقنية في هندسة التصميم وحل المشكلات.</li>
+                                <li>تبني التعاون والسعي بنشاط للحصول على التعليقات للنمو المهني.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-graduation-cap"></i> التعليم</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-content">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>بكالوريوس في الهندسة الميكانيكية</h3>
+                        <h4>جامعة الأزهر، القاهرة</h4>
+                        <p class="education-date">يناير 2018 - أبريل 2023</p>
+                        <p class="education-grade">التقدير: جيد</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-tools"></i> المهارات</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-content">
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h3>SolidWorks</h3>
+                        <p>ماهر في استخدام SolidWorks للنمذجة ثلاثية الأبعاد والتصميم والمحاكاة للمكونات والأنظمة الميكانيكية.</p>
+                        <div class="skill-tags">
+                            <span>CAD</span>
+                            <span>النمذجة ثلاثية الأبعاد</span>
+                            <span>التصميم الميكانيكي</span>
+                            <span>المحاكاة</span>
+                            <span>التحليل الهندسي</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Revit</h3>
+                        <p>ماهر في تصميم ونمذجة أنظمة busway شاملة باستخدام Revit، وتحويل الرسومات المعمارية ثنائية الأبعاد إلى نماذج ثلاثية الأبعاد.</p>
+                        <div class="skill-tags">
+                            <span>BIM</span>
+                            <span>تصميم busway</span>
+                            <span>النمذجة ثلاثية الأبعاد</span>
+                            <span>الرسومات المعمارية</span>
+                            <span>وثائق المشروع</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Inventor</h3>
+                        <p>خبرة في استخدام Autodesk Inventor لنمذجة المكونات والتصميم الميكانيكي، مما يضمن الدقة في المشاريع الهندسية.</p>
+                        <div class="skill-tags">
+                            <span>CAD</span>
+                            <span>النمذجة ثلاثية الأبعاد</span>
+                            <span>المكونات الميكانيكية</span>
+                            <span>Autodesk</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>AutoCAD</h3>
+                        <p>خبرة في إنشاء رسومات تفصيلية ثنائية الأبعاد للتصميمات الميكانيكية والكهربائية، ودمج التصميمات في نماذج Revit.</p>
+                        <div class="skill-tags">
+                            <span>الرسم ثنائي الأبعاد</span>
+                            <span>الرسومات الميكانيكية</span>
+                            <span>CAD</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>تقنيات التصنيع</h3>
+                        <p>معرفة بمختلف عمليات التصنيع وأفضل الممارسات لتحسين التصميم.</p>
+                        <div class="skill-tags">
+                            <span>التشغيل الآلي</span>
+                            <span>التصنيع</span>
+                            <span>التجميع</span>
+                            <span>عمليات الإنتاج</span>
+                            <span>الألواح المعدنية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-certificate"></i> الشهادات</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-content">
+                <div class="certifications-grid">
+                    <div class="certification-card">
+                        <div class="certification-logo">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certification-details">
+                            <h3>Certified SolidWorks Associate (CSWA)</h3>
+                            <p class="certification-issuer">Dassault Systèmes</p>
+                            <p class="certification-date">أكتوبر 2021</p>
+                            <a href="#" class="certification-link">عرض الشهادة <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="certification-card">
+                        <div class="certification-logo">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certification-details">
+                            <h3>Lean Six Sigma Yellow Belt</h3>
+                            <p class="certification-issuer">6sigmastudy - The Global Certification Body for Six Sigma Certifications</p>
+                            <p class="certification-date">فبراير 2021</p>
+                            <a href="#" class="certification-link">عرض الشهادة <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="certification-card">
+                        <div class="certification-logo">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certification-details">
+                            <h3>Operations Management Foundation</h3>
+                            <p class="certification-issuer">Project Management Institute (PMI)</p>
+                            <p class="certification-date">مارس 2025</p>
+                            <a href="#" class="certification-link">عرض الشهادة <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="certification-card">
+                        <div class="certification-logo">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="certification-details">
+                            <h3>Revit for Design Professional</h3>
+                            <p class="certification-issuer">LinkedIn Learning</p>
+                            <p class="certification-date">فبراير 2025</p>
+                            <a href="#" class="certification-link">عرض الشهادة <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="languages" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-language"></i> اللغات</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-content">
+                <div class="languages-container">
+                    <div class="language-card">
+                        <div class="language-icon">
+                            <i class="fas fa-globe-africa"></i>
+                        </div>
+                        <div class="language-details">
+                            <h3>العربية</h3>
+                            <div class="language-level">
+                                <div class="level-bar level-native"></div>
+                                <span>اللغة الأم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="language-card">
+                        <div class="language-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="language-details">
+                            <h3>الإنجليزية</h3>
+                            <div class="language-level">
+                                <div class="level-bar level-b2"></div>
+                                <span>متوسط (B2)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-project-diagram"></i> المشاريع</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="section-content">
+                <div class="projects-container">
+                    <div class="project-gallery" id="project-gallery">
+                        <!-- سيتم إضافة الصور ديناميكياً بواسطة JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer>
-    <p>© 2025 Mohamed Ahmed Kamel | Designed for professional portfolio</p>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>محمد أحمد كامل</h3>
+                <p>مهندس تصميم ميكانيكي</p>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:kamelmohamedahmed154@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+201014599752"><i class="fas fa-phone"></i></a>
+                <a href="https://www.linkedin.com/in/mohamed-kamel" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025 محمد أحمد كامل | جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </div>
 </footer>
 
-<script src="script.js"></script>
+<div class="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
