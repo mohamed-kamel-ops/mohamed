@@ -1,10 +1,11 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background: #f4f4f4;
     color: #333;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -18,7 +19,7 @@ header {
     color: white;
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .profile-pic {
@@ -27,6 +28,7 @@ header {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
+    border: 4px solid #f4a261;
 }
 
 nav ul {
@@ -46,11 +48,15 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
 }
 
-nav ul li a:hover {
-    color: #f4a261;
+nav ul li a:hover,
+nav ul li a.active {
+    background: #f4a261;
+    color: #222;
 }
 
 .section {
@@ -59,18 +65,24 @@ nav ul li a:hover {
     background: white;
     margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     width: 90%;
+    transition: transform 0.3s;
 }
 
+.section:hover {
+    transform: scale(1.01);
+}
+
+/* Experience Section */
 .experience-item {
     text-align: left;
     margin-bottom: 20px;
     padding: 20px;
     background: #e9ecef;
-    border-left: 5px solid #333;
+    border-left: 5px solid #f4a261;
     border-radius: 5px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background 0.3s;
     position: relative;
 }
 
@@ -80,41 +92,62 @@ nav ul li a:hover {
 }
 
 .experience-item::after {
-    content: '\2192'; /* سهم يشير للتطور */
+    content: '→'; 
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
-    color: #333;
+    color: #f4a261;
 }
 
-.company-logo {
-    width: 30px; /* حجم صغير للشعار */
-    height: 30px;
-    vertical-align: middle;
-    margin-left: 10px;
-}
-
+/* Skills Section */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .skills-container span {
     background: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 18px;
     border-radius: 5px;
-    transition: background 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .skills-container span:hover {
     background: #f4a261;
+    color: #222;
+    transform: scale(1.1);
 }
 
+/* Projects Section */
+#project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#project-gallery img {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#project-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -147,5 +180,9 @@ footer {
     .experience-item {
         padding: 15px;
         font-size: 14px;
+    }
+    
+    #project-gallery img {
+        width: 90%;
     }
 }
