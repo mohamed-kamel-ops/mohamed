@@ -1,92 +1,36 @@
 /**
- * السيرة الذاتية لمحمد أحمد كامل
- * تصميم وتطوير: Manus AI
+ * Mohamed Ahmed Kamel Resume
+ * JavaScript functionality
  */
 
 document.addEventListener("DOMContentLoaded", function() {
-    // تحديد العناصر
-    const navLinks = document.querySelectorAll(".main-nav ul li a");
-    const sections = document.querySelectorAll(".section");
-    const scrollTopBtn = document.querySelector(".scroll-top");
-    const mainNav = document.querySelector(".main-nav");
-    
-    // إضافة صور المشاريع ديناميكياً
-    addProjectImages();
-    
-    // تفعيل تأثيرات الظهور عند التمرير
+    // Initialize fade-in animations on scroll
     initScrollAnimations();
     
-    // تفعيل التنقل السلس بين الأقسام
+    // Enable smooth scrolling for navigation links
     initSmoothScrolling();
     
-    // تفعيل زر التمرير لأعلى
+    // Set up the scroll to top button
     initScrollTopButton();
     
-    // تفعيل تغيير حالة القائمة عند التمرير
+    // Initialize navbar scroll state and active link tracking
     initNavbarScrollState();
-    
-    // تفعيل تأثيرات التفاعل مع العناصر
-    initInteractionEffects();
 });
 
 /**
- * إضافة صور المشاريع ديناميكياً
- */
-function addProjectImages() {
-    const projectGallery = document.getElementById("project-gallery");
-    
-    // بيانات المشاريع
-    const projects = [
-        {
-            image: "images/busway_design.jpg",
-            title: "تصميم نظام Busway",
-            description: "تصميم ونمذجة أنظمة busway شاملة باستخدام Revit"
-        },
-        {
-            image: "images/mechanical_model.jpg",
-            title: "نموذج ميكانيكي",
-            description: "تصميم وتطوير نماذج ميكانيكية باستخدام SolidWorks"
-        },
-        {
-            image: "images/industrial_project.jpg",
-            title: "مشروع صناعي",
-            description: "تصميم وتنفيذ مشاريع صناعية متكاملة"
-        }
-    ];
-    
-    // إنشاء بطاقات المشاريع
-    projects.forEach(project => {
-        const projectCard = document.createElement("div");
-        projectCard.className = "project-card fade-in";
-        
-        projectCard.innerHTML = `
-            <img src="${project.image}" alt="${project.title}" class="project-image">
-            <div class="project-overlay">
-                <div>
-                    <h3 class="project-title">${project.title}</h3>
-                    <p class="project-description">${project.description}</p>
-                </div>
-            </div>
-        `;
-        
-        projectGallery.appendChild(projectCard);
-    });
-}
-
-/**
- * تفعيل تأثيرات الظهور عند التمرير
+ * Initialize fade-in animations on scroll
  */
 function initScrollAnimations() {
     const fadeElements = document.querySelectorAll(".fade-in");
     
-    // إضافة فئة fade-in لجميع العناصر التي نريد تطبيق تأثير الظهور عليها
+    // Add 'fade-in' class to all section elements we want to animate
     document.querySelectorAll(".section-header, .timeline-item, .education-card, .skill-card, .certification-card, .language-card").forEach(el => {
         if (!el.classList.contains("fade-in")) {
             el.classList.add("fade-in");
         }
     });
     
-    // تفعيل تأثير الظهور عند التمرير
+    // Check if elements are in the viewport and add 'visible' class
     const checkFade = () => {
         const triggerBottom = window.innerHeight * 0.8;
         
@@ -99,15 +43,15 @@ function initScrollAnimations() {
         });
     };
     
-    // تحقق من العناصر عند تحميل الصفحة
+    // Check elements on page load
     checkFade();
     
-    // تحقق من العناصر عند التمرير
+    // Check elements on scroll
     window.addEventListener("scroll", checkFade);
 }
 
 /**
- * تفعيل التنقل السلس بين الأقسام
+ * Initialize smooth scrolling for navigation links
  */
 function initSmoothScrolling() {
     const navLinks = document.querySelectorAll(".main-nav ul li a");
@@ -132,12 +76,12 @@ function initSmoothScrolling() {
 }
 
 /**
- * تفعيل زر التمرير لأعلى
+ * Initialize the scroll to top button
  */
 function initScrollTopButton() {
-    const scrollTopBtn = document.querySelector(".scroll-top");
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
     
-    // إظهار/إخفاء زر التمرير لأعلى
+    // Show/hide the scroll-to-top button based on scroll position
     window.addEventListener("scroll", function() {
         if (window.scrollY > 300) {
             scrollTopBtn.classList.add("active");
@@ -146,7 +90,7 @@ function initScrollTopButton() {
         }
     });
     
-    // التمرير لأعلى عند النقر على الزر
+    // Scroll to top when the button is clicked
     scrollTopBtn.addEventListener("click", function() {
         window.scrollTo({
             top: 0,
@@ -156,23 +100,22 @@ function initScrollTopButton() {
 }
 
 /**
- * تفعيل تغيير حالة القائمة عند التمرير
+ * Initialize navbar state changes on scroll and active link tracking
  */
 function initNavbarScrollState() {
     const mainNav = document.querySelector(".main-nav");
     const navLinks = document.querySelectorAll(".main-nav ul li a");
     const sections = document.querySelectorAll(".section");
     
-    // تغيير حالة القائمة عند التمرير
     window.addEventListener("scroll", function() {
-        // إضافة فئة scrolled للقائمة عند التمرير
+        // Add 'scrolled' class to navbar when scrolled
         if (window.scrollY > 100) {
             mainNav.classList.add("scrolled");
         } else {
             mainNav.classList.remove("scrolled");
         }
         
-        // تحديث الرابط النشط في القائمة
+        // Update active link in navigation
         let current = "";
         
         sections.forEach(section => {
@@ -191,70 +134,4 @@ function initNavbarScrollState() {
             }
         });
     });
-}
-
-/**
- * تفعيل تأثيرات التفاعل مع العناصر
- */
-function initInteractionEffects() {
-    // تأثير تفاعلي للمهارات
-    document.querySelectorAll(".skill-card").forEach(card => {
-        card.addEventListener("mouseenter", function() {
-            this.style.transform = "translateY(-10px)";
-            this.style.boxShadow = "0 15px 30px rgba(0, 0, 0, 0.15)";
-        });
-        
-        card.addEventListener("mouseleave", function() {
-            this.style.transform = "";
-            this.style.boxShadow = "";
-        });
-    });
-    
-    // تأثير تفاعلي للشهادات
-    document.querySelectorAll(".certification-card").forEach(card => {
-        card.addEventListener("mouseenter", function() {
-            const logo = this.querySelector(".certification-logo");
-            if (logo) {
-                logo.style.backgroundColor = "var(--secondary-color)";
-            }
-        });
-        
-        card.addEventListener("mouseleave", function() {
-            const logo = this.querySelector(".certification-logo");
-            if (logo) {
-                logo.style.backgroundColor = "";
-            }
-        });
-    });
-    
-    // تأثير تفاعلي للخبرات
-    document.querySelectorAll(".timeline-item").forEach(item => {
-        item.addEventListener("mouseenter", function() {
-            const dot = this.querySelector(".timeline-dot");
-            if (dot) {
-                dot.style.transform = "scale(1.3)";
-                dot.style.backgroundColor = "var(--accent-color)";
-            }
-        });
-        
-        item.addEventListener("mouseleave", function() {
-            const dot = this.querySelector(".timeline-dot");
-            if (dot) {
-                dot.style.transform = "";
-                dot.style.backgroundColor = "";
-            }
-        });
-    });
-    
-    // تأثير تفاعلي للصورة الشخصية
-    const profilePic = document.querySelector(".profile-pic");
-    if (profilePic) {
-        profilePic.addEventListener("mouseenter", function() {
-            this.style.transform = "scale(1.05)";
-        });
-        
-        profilePic.addEventListener("mouseleave", function() {
-            this.style.transform = "";
-        });
-    }
 }
