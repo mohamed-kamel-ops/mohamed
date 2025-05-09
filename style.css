@@ -1,1078 +1,137 @@
-/* 
- * السيرة الذاتية لمحمد أحمد كامل
- * تصميم وتطوير: Manus AI
+/**
+ * Mohamed Ahmed Kamel Resume
+ * JavaScript functionality
  */
 
-/* ===== المتغيرات والخصائص الأساسية ===== */
-:root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --light-color: #ecf0f1;
-    --dark-color: #2c3e50;
-    --text-color: #333;
-    --text-light: #7f8c8d;
-    --border-radius: 8px;
-    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease-in-out;
-}
-
-/* ===== إعادة ضبط وأنماط عامة ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Cairo', sans-serif;
-    background-color: #f5f7fa;
-    color: var(--text-color);
-    line-height: 1.6;
-    direction: rtl;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    transition: var(--transition);
-}
-
-a:hover {
-    color: var(--accent-color);
-}
-
-ul {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* ===== الهيدر والمعلومات الشخصية ===== */
-.header-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
-    color: white;
-    padding: 60px 0 30px;
-    margin-bottom: 60px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-}
-
-.header-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(52, 152, 219, 0.1)"/></svg>');
-    background-size: cover;
-}
-
-.profile-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-    position: relative;
-    z-index: 1;
-}
-
-.profile-image-container {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-    border: 5px solid rgba(255, 255, 255, 0.2);
-    transition: var(--transition);
-}
-
-.profile-image-container:hover {
-    transform: scale(1.05);
-    border-color: var(--secondary-color);
-}
-
-.profile-pic {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.profile-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(44, 62, 80, 0.8);
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    transition: .5s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.profile-image-container:hover .profile-overlay {
-    height: 40%;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.social-links a {
-    color: white;
-    font-size: 20px;
-    transition: var(--transition);
-}
-
-.social-links a:hover {
-    color: var(--accent-color);
-    transform: scale(1.2);
-}
-
-.profile-info {
-    flex: 1;
-}
-
-.profile-info h1 {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-    color: white;
-}
-
-.profile-info h2 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 20px;
-    color: var(--light-color);
-    opacity: 0.9;
-}
-
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.contact-info p {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-left: 20px;
-}
-
-.contact-info i {
-    color: var(--secondary-color);
-}
-
-.contact-info a {
-    color: var(--light-color);
-}
-
-.contact-info a:hover {
-    color: var(--secondary-color);
-}
-
-/* ===== القائمة الرئيسية ===== */
-.main-nav {
-    background-color: white;
-    padding: 15px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: var(--transition);
-}
-
-.main-nav.scrolled {
-    padding: 10px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.main-nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.main-nav ul li a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 15px;
-    color: var(--primary-color);
-    font-weight: 600;
-    border-radius: var(--border-radius);
-    transition: var(--transition);
-}
-
-.main-nav ul li a:hover,
-.main-nav ul li a.active {
-    background-color: var(--secondary-color);
-    color: white;
-    transform: translateY(-2px);
-}
-
-.main-nav ul li a i {
-    font-size: 1.1rem;
-}
-
-/* ===== المحتوى الرئيسي والأقسام ===== */
-main {
-    padding: 20px 0 60px;
-}
-
-.section {
-    background-color: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    margin-bottom: 40px;
-    padding: 40px;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(135deg, transparent 50%, rgba(52, 152, 219, 0.1) 50%);
-    border-radius: 0 0 0 100px;
-}
-
-.section-header {
-    margin-bottom: 30px;
-    position: relative;
-    text-align: center;
-}
-
-.section-header h2 {
-    display: inline-block;
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.section-header h2 i {
-    margin-left: 10px;
-    color: var(--secondary-color);
-}
-
-.section-divider {
-    height: 3px;
-    width: 80px;
-    background: var(--secondary-color);
-    margin: 0 auto;
-    position: relative;
-}
-
-.section-divider::before {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 3px;
-    background: var(--accent-color);
-    right: -20px;
-    bottom: 0;
-}
-
-.section-content {
-    padding: 20px 0;
-}
-
-/* ===== قسم النبذة ===== */
-#summary .section-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-align: justify;
-    position: relative;
-    padding: 20px;
-    background-color: rgba(236, 240, 241, 0.5);
-    border-radius: var(--border-radius);
-    border-right: 4px solid var(--secondary-color);
-}
-
-/* ===== قسم الخبرات ===== */
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: var(--secondary-color);
-    top: 0;
-    bottom: 0;
-    right: 20px;
-    margin-right: -2px;
-}
-
-.timeline-item {
-    padding: 10px 50px 10px 30px;
-    position: relative;
-    background-color: inherit;
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.timeline-dot {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    right: 12px;
-    background-color: white;
-    border: 4px solid var(--secondary-color);
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-    transition: var(--transition);
-}
-
-.timeline-item:hover .timeline-dot {
-    background-color: var(--accent-color);
-    transform: scale(1.2);
-}
-
-.timeline-date {
-    position: absolute;
-    top: -10px;
-    left: 30px;
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    box-shadow: 0 3px 10px rgba(52, 152, 219, 0.3);
-    z-index: 1;
-}
-
-.timeline-content {
-    padding: 20px;
-    background-color: white;
-    position: relative;
-    border-radius: var(--border-radius);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-    border-right: 4px solid var(--secondary-color);
-}
-
-.timeline-item:hover .timeline-content {
-    transform: translateX(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-content h3 {
-    color: var(--primary-color);
-    margin-bottom: 5px;
-}
-
-.timeline-content h4 {
-    color: var(--secondary-color);
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.timeline-content .location {
-    color: var(--text-light);
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.timeline-content ul {
-    padding-right: 20px;
-}
-
-.timeline-content ul li {
-    position: relative;
-    padding-right: 20px;
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-.timeline-content ul li::before {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: var(--secondary-color);
-    border-radius: 50%;
-    right: 0;
-    top: 8px;
-}
-
-/* ===== قسم التعليم ===== */
-.education-card {
-    display: flex;
-    background-color: white;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-}
-
-.education-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.education-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 2rem;
-    transition: var(--transition);
-}
-
-.education-card:hover .education-icon {
-    background-color: var(--secondary-color);
-}
-
-.education-details {
-    flex: 1;
-    padding: 25px;
-}
-
-.education-details h3 {
-    color: var(--primary-color);
-    margin-bottom: 5px;
-}
-
-.education-details h4 {
-    color: var(--secondary-color);
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.education-date, .education-grade {
-    color: var(--text-light);
-    font-size: 0.95rem;
-    margin-bottom: 5px;
-}
-
-/* ===== قسم المهارات ===== */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.skill-card {
-    background-color: white;
-    border-radius: var(--border-radius);
-    padding: 25px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-    border-bottom: 3px solid transparent;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    border-bottom-color: var(--secondary-color);
-}
-
-.skill-icon {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(52, 152, 219, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    transition: var(--transition);
-}
-
-.skill-card:hover .skill-icon {
-    background-color: var(--secondary-color);
-    color: white;
-    transform: scale(1.1);
-}
-
-.skill-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: var(--primary-color);
-}
-
-.skill-card p {
-    color: var(--text-color);
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.skill-tags span {
-    background-color: rgba(52, 152, 219, 0.1);
-    color: var(--secondary-color);
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    transition: var(--transition);
-}
-
-.skill-tags span:hover {
-    background-color: var(--secondary-color);
-    color: white;
-    transform: scale(1.05);
-}
-
-/* ===== قسم الشهادات ===== */
-.certifications-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.certification-card {
-    display: flex;
-    background-color: white;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-    height: 100%;
-}
-
-.certification-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.certification-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 1.8rem;
-    transition: var(--transition);
-}
-
-.certification-card:hover .certification-logo {
-    background-color: var(--secondary-color);
-}
-
-.certification-details {
-    flex: 1;
-    padding: 20px;
-}
-
-.certification-details h3 {
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.certification-issuer {
-    color: var(--text-light);
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-}
-
-.certification-date {
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.certification-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.certification-link:hover {
-    color: var(--accent-color);
-    transform: translateX(-5px);
-}
-
-/* ===== قسم اللغات ===== */
-.languages-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.language-card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: white;
-    border-radius: var(--border-radius);
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-    width: 300px;
-}
-
-.language-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.language-icon {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(52, 152, 219, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    color: var(--secondary-color);
-    transition: var(--transition);
-}
-
-.language-card:hover .language-icon {
-    background-color: var(--secondary-color);
-    color: white;
-    transform: scale(1.1);
-}
-
-.language-details {
-    flex: 1;
-}
-
-.language-details h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
-
-.language-level {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.level-bar {
-    height: 6px;
-    background-color: #e0e0e0;
-    border-radius: 3px;
-    position: relative;
-    overflow: hidden;
-}
-
-.level-bar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    background-color: var(--secondary-color);
-    border-radius: 3px;
-}
-
-.level-native::before {
-    width: 100%;
-}
-
-.level-b2::before {
-    width: 75%;
-}
-
-.language-level span {
-    font-size: 0.9rem;
-    color: var(--text-light);
-}
-
-/* ===== قسم المشاريع ===== */
-.projects-container {
-    padding: 20px 0;
-}
-
-.project-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.project-card {
-    position: relative;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-    height: 250px;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.project-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.project-card:hover .project-image {
-    transform: scale(1.1);
-}
-
-.project-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    transition: .5s ease;
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
-}
-
-.project-card:hover .project-overlay {
-    height: 100%;
-}
-
-.project-title {
-    color: white;
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: var(--transition);
-    transition-delay: 0.1s;
-}
-
-.project-card:hover .project-title {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.project-description {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: var(--transition);
-    transition-delay: 0.2s;
-}
-
-.project-card:hover .project-description {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-/* ===== الفوتر ===== */
-footer {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
-    color: white;
-    padding: 50px 0 20px;
-    position: relative;
-}
-
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
-.footer-info h3 {
-    color: white;
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-    text-align: center;
-}
-
-.footer-info p {
-    color: var(--light-color);
-    text-align: center;
-}
-
-.footer-contact {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-contact a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    transition: var(--transition);
-}
-
-.footer-contact a:hover {
-    background-color: var(--secondary-color);
-    color: white;
-    transform: translateY(-5px);
-}
-
-.footer-copyright {
-    margin-top: 20px;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
-}
-
-/* ===== زر التمرير لأعلى ===== */
-.scroll-top {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--secondary-color);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition);
-    z-index: 999;
-}
-
-.scroll-top.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.scroll-top:hover {
-    background-color: var(--accent-color);
-    transform: translateY(-5px);
-}
-
-/* ===== تأثيرات الظهور عند التمرير ===== */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ===== تصميم متجاوب ===== */
-@media screen and (max-width: 992px) {
-    .profile-container {
-        flex-direction: column;
-        text-align: center;
-    }
+document.addEventListener("DOMContentLoaded", function() {
+    // Initialize fade-in animations on scroll
+    initScrollAnimations();
     
-    .contact-info {
-        justify-content: center;
-    }
+    // Enable smooth scrolling for navigation links
+    initSmoothScrolling();
     
-    .section {
-        padding: 30px;
-    }
+    // Set up the scroll to top button
+    initScrollTopButton();
     
-    .timeline::after {
-        right: 31px;
-    }
+    // Initialize navbar scroll state and active link tracking
+    initNavbarScrollState();
+});
+
+/**
+ * Initialize fade-in animations on scroll
+ */
+function initScrollAnimations() {
+    const fadeElements = document.querySelectorAll(".fade-in");
+    
+    // Add 'fade-in' class to all section elements we want to animate
+    document.querySelectorAll(".section-header, .timeline-item, .education-card, .skill-card, .certification-card, .language-card").forEach(el => {
+        if (!el.classList.contains("fade-in")) {
+            el.classList.add("fade-in");
+        }
+    });
+    
+    // Check if elements are in the viewport and add 'visible' class
+    const checkFade = () => {
+        const triggerBottom = window.innerHeight * 0.8;
+        
+        fadeElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            
+            if (elementTop < triggerBottom) {
+                element.classList.add("visible");
+            }
+        });
+    };
+    
+    // Check elements on page load
+    checkFade();
+    
+    // Check elements on scroll
+    window.addEventListener("scroll", checkFade);
 }
 
-@media screen and (max-width: 768px) {
-    .header-section {
-        padding: 40px 0 20px;
-        margin-bottom: 40px;
-    }
+/**
+ * Initialize smooth scrolling for navigation links
+ */
+function initSmoothScrolling() {
+    const navLinks = document.querySelectorAll(".main-nav ul li a");
     
-    .profile-image-container {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .profile-info h1 {
-        font-size: 2rem;
-    }
-    
-    .profile-info h2 {
-        font-size: 1.2rem;
-    }
-    
-    .main-nav ul {
-        flex-direction: row;
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding: 10px 0;
-    }
-    
-    .main-nav ul li a {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-    
-    .section {
-        padding: 25px;
-        margin-bottom: 30px;
-    }
-    
-    .section-header h2 {
-        font-size: 1.5rem;
-    }
-    
-    .timeline-item {
-        padding: 10px 40px 10px 20px;
-    }
-    
-    .timeline-date {
-        font-size: 0.8rem;
-        padding: 4px 10px;
-    }
-    
-    .skills-grid, .certifications-grid, .project-gallery {
-        grid-template-columns: 1fr;
-    }
-    
-    .education-icon {
-        width: 70px;
-    }
-    
-    .education-details {
-        padding: 15px;
-    }
-    
-    .language-card {
-        width: 100%;
-    }
+    navLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 70;
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
 }
 
-@media screen and (max-width: 576px) {
-    .container {
-        width: 95%;
-        padding: 0 10px;
-    }
+/**
+ * Initialize the scroll to top button
+ */
+function initScrollTopButton() {
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
     
-    .profile-image-container {
-        width: 120px;
-        height: 120px;
-    }
+    // Show/hide the scroll-to-top button based on scroll position
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add("active");
+        } else {
+            scrollTopBtn.classList.remove("active");
+        }
+    });
     
-    .profile-info h1 {
-        font-size: 1.8rem;
-    }
+    // Scroll to top when the button is clicked
+    scrollTopBtn.addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+
+/**
+ * Initialize navbar state changes on scroll and active link tracking
+ */
+function initNavbarScrollState() {
+    const mainNav = document.querySelector(".main-nav");
+    const navLinks = document.querySelectorAll(".main-nav ul li a");
+    const sections = document.querySelectorAll(".section");
     
-    .profile-info h2 {
-        font-size: 1.1rem;
-    }
-    
-    .contact-info {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .section {
-        padding: 20px;
-    }
-    
-    .timeline::after {
-        right: 21px;
-    }
-    
-    .timeline-item {
-        padding: 10px 30px 10px 10px;
-    }
-    
-    .timeline-content {
-        padding: 15px;
-    }
-    
-    .footer-contact {
-        gap: 15px;
-    }
-    
-    .scroll-top {
-        bottom: 20px;
-        left: 20px;
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
+    window.addEventListener("scroll", function() {
+        // Add 'scrolled' class to navbar when scrolled
+        if (window.scrollY > 100) {
+            mainNav.classList.add("scrolled");
+        } else {
+            mainNav.classList.remove("scrolled");
+        }
+        
+        // Update active link in navigation
+        let current = "";
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 150;
+            const sectionHeight = section.offsetHeight;
+            
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                current = section.getAttribute("id");
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === current) {
+                link.classList.add("active");
+            }
+        });
+    });
 }
