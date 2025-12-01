@@ -933,3 +933,14 @@ main {
         left: 7px;
     }
 }
+
+/* Fix animation flickering and disappearing elements */
+.fade-in.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Prevent fade-in from re-triggering causing blinking */
+.fade-in {
+    will-change: opacity, transform;
+}
