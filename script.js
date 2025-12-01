@@ -21,32 +21,26 @@ document.addEventListener("DOMContentLoaded", function() {
  * Initialize fade-in animations on scroll
  */
 function initScrollAnimations() {
+    // (1) أضف كلاس fade-in لكل العناصر
+    document.querySelectorAll(".section-header, .timeline-item, .education-card, .skill-card, .certification-card, .language-card")
+        .forEach(el => el.classList.add("fade-in"));
+
+    // (2) دلوقتي اختار العناصر بعد إضافة الكلاس
     const fadeElements = document.querySelectorAll(".fade-in");
-    
-    // Add 'fade-in' class to all section elements we want to animate
-    document.querySelectorAll(".section-header, .timeline-item, .education-card, .skill-card, .certification-card, .language-card").forEach(el => {
-        if (!el.classList.contains("fade-in")) {
-            el.classList.add("fade-in");
-        }
-    });
-    
-    // Check if elements are in the viewport and add 'visible' class
+
     const checkFade = () => {
         const triggerBottom = window.innerHeight * 0.8;
-        
+
         fadeElements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
-            
+
             if (elementTop < triggerBottom) {
                 element.classList.add("visible");
             }
         });
     };
-    
-    // Check elements on page load
+
     checkFade();
-    
-    // Check elements on scroll
     window.addEventListener("scroll", checkFade);
 }
 
@@ -135,3 +129,4 @@ function initNavbarScrollState() {
         });
     });
 }
+
